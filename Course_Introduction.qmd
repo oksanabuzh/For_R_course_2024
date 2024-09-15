@@ -1,0 +1,217 @@
+---
+title: "Course Introduction"
+subtitle: "Day 1"
+author: "Felix May  and  Oksana Buzhdygan"
+institute: "Freie Universität Berlin @ Theoretical Ecology"
+date: 09/16/2024
+date-format: long
+format:
+  revealjs:
+    code-link: true
+    footer: "Introduction to R"
+    highlight-style: breeze
+    mainfont: Cabinet Grotesk
+    toc: true
+    toc-depth: 1
+    number-sections: true
+    number-depth: 1
+    slide-number: true
+    show-slide-number: all
+    incremental: false
+    code-line-numbers: false
+    auto-stretch: true
+    scrollable: false
+    fig-align: center
+    theme: ../slides.scss
+execute:
+  echo: true
+  warning: false
+  message: false
+from: markdown+emoji
+title-slide-attributes:
+  data-background-position: 90% 85%
+  data-background-size: "20%"
+editor:
+  markdown:
+    wrap: 72
+---
+```{r, setup_path, include=FALSE}
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+```{r}
+#| echo: false 
+
+## keep it in, then renv can find the dependency
+library(downlit)
+library(xml2)
+library(ggplot2)
+library(rmarkdown)
+library(readr)
+library(dplyr)
+```
+
+# Instructors {.inverse}
+
+## Felix May
+
+:::{.columns}
+
+:::{.column width="50%"}
+
+- Senior Scientist
+- Contact: [felix.may@fu-berlin.de](mailto:felix.may@fu-berlin.de)
+- [Webpage](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/People/wissenschaftliche_mitarbeiter/May)
+
+:::
+
+:::{.column width="50%"}
+
+![](img/Felix_m.jpg){fig-align="center" width=50% }<br>
+
+:::
+:::
+
+<h6>
+[FU Berlin @Theoretical Ecology](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/)
+<h6>
+
+---
+
+## Oksana Buzhdygan
+
+:::{.columns}
+
+:::{.column width="50%"}
+
+- Senior Scientist
+- Contact: [oksana.buzh@fu-berlin.de ](mailto:oksana.buzh@fu-berlin.de )
+- [Webpage](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/People/wissenschaftliche_mitarbeiter/Buzhdygan)
+
+
+:::
+
+:::{.column width="50%"}
+
+![](img/Oksana.jpg){fig-align="center" width=50% }<br>
+
+:::
+:::
+
+<h6>
+[FU Berlin @Theoretical Ecology](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/)
+<h6>
+
+# Acknowledgements {.inverse}
+Some of the material is taken from Selina Baldauf and Britta Tietjen
+
+## Selina Baldauf
+
+:::{.columns}
+
+:::{.column width="50%"}
+
+- Scientific Programmer
+- Contact: [selina.baldauf@fu-berlin.de](mailto:selina.baldauf@fu-berlin.de)
+- [Webpage](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/People/wissenschaftliche_programmierer/baldauf)
+
+Selina's Workshop [Introduction to R for Data Analysis](https://selinazitrone.github.io/intro-r-data-analysis)
+
+:::
+
+:::{.column width="50%"}
+
+![](img/Selina.jpg){fig-align="center" width=50% }<br>
+
+:::
+:::
+
+<h6>
+[FU Berlin @Theoretical Ecology](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/)
+<h6>
+
+
+---
+
+## Britta Tietjen
+
+:::{.columns}
+
+:::{.column width="50%"}
+
+- Professor for Theoretical Ecology
+- Contact: [britta.tietjen@fu-berlin.de ](mailto:britta.tietjen@fu-berlin.de )
+- [Webpage](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/People/professoren/tietjen)
+
+
+:::
+
+:::{.column width="50%"}
+
+![](img/Britta.jpg){fig-align="center" width=50% }<br>
+
+:::
+:::
+
+<h6>
+[FU Berlin @Theoretical Ecology](https://www.bcp.fu-berlin.de/en/biologie/arbeitsgruppen/botanik/ag_tietjen/)
+<h6>
+
+# Timetable and course structure
+
+- Block course: 16.09.2024 - 26.09.2024
+- Lecture is always available at 12:00 the day before the actual course day, 
+  it will also include tasks for practice, but do not start them yet!
+- Every day we meet in person from 09:00 am to 12:00
+  There we will work together on the tasks
+- Coffee breaks in-between
+
+# Attendance:
+- Physical attendance at the course days is mandatory
+- Solutions can be found in case of illness
+- In case of extremely urgent matters that impede your attendance, get in touch with us beforehand!
+
+
+# Exam
+
+- Written report 
+- Analysis of a dataset under specific questions
+- Detailed description of the analysis procedures, their results and the follow up interpretation of the obtained results
+– details later during the course on day 9!
+
+- Deadline for submission is three weeks after the end of the course (details later).
+
+<h6>
+By default, we would give a joint grade for the two/three people working on this task. If you wish to be graded separately, you need to (i) say this during submission and (ii) indicate VERY clearly, which parts of the code/report were written by whom –this might be a bit tricky but is essential to give fair, separate grades.
+<h6>
+
+# Literature
+
+- The lecture material can be found on blackboard
+- Literature recommendations:
+  - Rudolf und Kuhlisch: Biostatistik. Eine Einführung für Bio- und Umweltwissenschaftler.
+  - Hatzinger et al.: R. Einführung durch angewandte Statistik.
+  - Jones E., Harden S., Crawley, M. J. 2022. The R Book
+  - Zuur: Beginnersguide
+  - Daalgard, P. 2008. IntroductoryStatisticswithR. Springer, Dordrecht
+  - Adler, J. 2010.R in a nutshell: A desktopquick reference.
+  - O'ReillyMedia, Inc.Groß, J. 2010. Grundlegende Statistik mit R : Eine anwendungsorientierte Einführung in die Verwendung der Statistik Software R
+
+
+# Course schedule
+
+
+::: {style="font-size: 60%;"}
+
+| Day | Date | Content | Instructors |
+|-----|------|---------|-------------|
+| 1 | Monday, 16 September | General course intro, Intro to R and RStudio, Data frames and Tibbles, Read in data in R|  Oksana|  
+| 2 | Tuesday, 17 September | Figures with ggplot2, Data transformation with dplyr| Oksana|
+| 3 | Wednesday, 18 September | Creating vectors and tables, Tidy data with tidyr, Join relational tables| Felix|
+| 4 | Thursday, 19 September | Introduction to applied statistics| Oksana|
+| 5 | Friday, 20 September | Linear models, Part 1| Oksana|
+| 6 | Monday, 23 September | Linear models, Part 2| Felix|
+| 7 | Tuesday, 24 September | Generalized linear models, Part 1| Felix|
+| 8 | Wednesday, 25 September| Generalized linear models, Part 2| Felix|
+| 9 | Thursday, 26 September | Practice day| Oksana & Felix|
+:::
